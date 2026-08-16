@@ -202,7 +202,10 @@ Configurable-Logging-Debugging-System/
 ├── Makefile
 ├── abc.c
 ├── .gitignore
-└── README.md
+├── README.md
+│
+└── screenshots/
+    └── preprocessor_execution.jpg
 ```
 
 ---
@@ -278,7 +281,8 @@ The generated preprocessed file can be viewed using:
 
 ```bash
 cat abc.i
-```markdown
+```
+
 ### Execution Demonstration
 
 The following screenshot shows the execution of the custom preprocessor, generation of the `.i` file, and the resulting preprocessed output.
@@ -528,4 +532,3 @@ The implementation also provides a foundation for developing configurable loggin
 **Bandike Tharun**
 
 **Project ID:** 35703
-

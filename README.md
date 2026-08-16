@@ -278,7 +278,12 @@ The generated preprocessed file can be viewed using:
 
 ```bash
 cat abc.i
-```
+```markdown
+### Execution Demonstration
+
+The following screenshot shows the execution of the custom preprocessor, generation of the `.i` file, and the resulting preprocessed output.
+
+![Preprocessor Execution](./screenshots/preprocessor_execution.jpg)
 
 ---
 

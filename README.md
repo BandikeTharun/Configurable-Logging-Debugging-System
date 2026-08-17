@@ -2,11 +2,11 @@
 
 ## Mini Project
 
-**Project ID:** 35703
-**Project Type:** Mini Project
-**Domain:** C Programming / C Preprocessor
-**Assigned Date:** 03 August 2026
-**Deadline:** 17 August 2026
+**Project ID:** 35703  
+**Project Type:** Mini Project  
+**Domain:** C Programming / C Preprocessor  
+**Assigned Date:** 03 August 2026  
+**Deadline:** 17 August 2026  
 
 ---
 
@@ -19,7 +19,7 @@ The program accepts a C source file as input and generates a preprocessed `.i` f
 The implementation demonstrates important preprocessing concepts such as:
 
 * Comment removal
-* Header/include expansion
+* Header/include processing
 * Simple `#define` macro expansion
 * Generation of an intermediate `.i` file
 * Modular C programming
@@ -205,7 +205,7 @@ Configurable-Logging-Debugging-System/
 ├── README.md
 │
 └── screenshots/
-    └── preprocessor_execution.jpg
+    └── preprocessor_execution.png
 ```
 
 ---
@@ -253,7 +253,16 @@ Compile the project using:
 make
 ```
 
-This generates the executable:
+The Makefile compiles the following source files:
+
+```text
+main.c
+comment.c
+include.c
+macro.c
+```
+
+and generates the executable:
 
 ```text
 my_Preprocessor
@@ -263,21 +272,21 @@ my_Preprocessor
 
 ## 9. Execution
 
-Use the following command:
+The custom preprocessor is executed by providing the C source file as a command-line argument.
+
+Run:
 
 ```bash
 ./my_Preprocessor abc.c
 ```
 
-Expected output:
+The program processes the input file and generates the preprocessed output file:
 
 ```text
-Preprocessing completed successfully.
-Input  : abc.c
-Output : abc.i
+abc.i
 ```
 
-The generated preprocessed file can be viewed using:
+The generated `.i` file can be viewed using:
 
 ```bash
 cat abc.i
@@ -285,7 +294,7 @@ cat abc.i
 
 ### Execution Demonstration
 
-The following screenshot shows the execution of the custom preprocessor, generation of the `.i` file, and the resulting preprocessed output.
+The following screenshot shows the execution of the custom preprocessor and the generated preprocessed output.
 
 ![Preprocessor Execution](./screenshots/preprocessor_execution.png)
 
@@ -331,7 +340,7 @@ After running:
 
 the generated `abc.i` contains the processed source.
 
-The comments are removed and the simple macros are substituted.
+The comments are removed and the simple object-like macros are substituted.
 
 For example:
 
@@ -339,12 +348,19 @@ For example:
 int x = 100;
 int y = 200;
 
+
 int main()
 {
-    int k = 3456;
-    printf("%d %d\n", k, 65);
-    return 0;
+    
+    int k=3456;
+    printf("%d %d\n",k,65);
 }
+```
+
+The generated output can be verified using:
+
+```bash
+cat abc.i
 ```
 
 ---
@@ -353,13 +369,13 @@ int main()
 
 The project uses a Makefile to simplify compilation.
 
-Build:
+Build the project:
 
 ```bash
 make
 ```
 
-Clean generated build files:
+Clean generated object files and executable:
 
 ```bash
 make clean
@@ -399,6 +415,8 @@ Expected:
 int x = 10;
 ```
 
+---
+
 ### Test 2: Single-Line Comment
 
 Input:
@@ -412,6 +430,8 @@ Expected:
 ```c
 int x = 10;
 ```
+
+---
 
 ### Test 3: Multi-Line Comment
 
@@ -429,6 +449,8 @@ Expected:
 ```c
 int x = 10;
 ```
+
+---
 
 ### Test 4: Normal C Code
 
@@ -514,6 +536,8 @@ The implemented system:
 * Processes simple include directives.
 * Expands simple macros.
 * Generates a `.i` preprocessed output file.
+
+The project was successfully compiled using GNU Make and tested on Ubuntu Linux.
 
 ---
 

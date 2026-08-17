@@ -287,7 +287,7 @@ cat abc.i
 
 The following screenshot shows the execution of the custom preprocessor, generation of the `.i` file, and the resulting preprocessed output.
 
-![Preprocessor Execution](./screenshots/preprocessor_execution.jpg)
+![Preprocessor Execution](./screenshots/preprocessor_execution.png)
 
 ---
 
